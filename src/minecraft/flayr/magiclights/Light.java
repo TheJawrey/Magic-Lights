@@ -17,8 +17,7 @@ public class Light extends BlockContainer
                 super(id, material);
                 this.setHardness(0.0F);
                 this.setLightValue(1.0f);
-                this.setUnlocalizedName("lightBlock");
-                this.setCreativeTab(MagicLights.tabMagicLights);
+                this.setUnlocalizedName("light");
         }
         @Override
         public boolean shouldSideBeRendered(IBlockAccess iblockaccess, int i, int j, int k, int l)
@@ -31,7 +30,7 @@ public class Light extends BlockContainer
            return false;}
 
 		@Override
-        public TileEntity createNezwTileEntity(World par1World)
+        public TileEntity createNewTileEntity(World par1world)
         {
                  return new TileEntityLight();
         }
