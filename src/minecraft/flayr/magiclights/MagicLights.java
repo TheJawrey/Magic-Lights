@@ -58,7 +58,11 @@ public class MagicLights
        
             config.load();
             lightID = config.getBlock("light", 672).getInt();
+<<<<<<< HEAD
             lightAlterID = config.getBlock("lightAlter", 673).getInt();
+=======
+            lightID = config.getBlock("lightAlter", 673).getInt();
+>>>>>>> 6de551054faeaa3d5078e24375d4f607231e180c
             lightStaffID = config.getItem("lightStaff", 2527).getInt();
             config.save();
         }
@@ -67,7 +71,11 @@ public class MagicLights
         public void load(FMLInitializationEvent event) {
             lightStaff = new LightStaff(lightStaffID);
             light = new Light(lightID, Material.rock);
+<<<<<<< HEAD
             lightAlter = new LightAlter(lightAlterID, Material.rock);
+=======
+            light = new Block(lightAlterID, Material.rock)
+>>>>>>> 6de551054faeaa3d5078e24375d4f607231e180c
             
         	ItemStack starStack = new ItemStack(Item.netherStar);
         	ItemStack stickStack = new ItemStack(Item.stick);
