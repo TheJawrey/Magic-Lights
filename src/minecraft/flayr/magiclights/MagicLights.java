@@ -30,12 +30,14 @@ public class MagicLights
 {
     public static final String MOD_ID = "MagicLights";
     static final String MOD_NAME = "Magic Lights";
-    static final String MOD_VERSION = "1.0.3";
+    static final String MOD_VERSION = "1.0.0";
     static final String SOURCE_PATH = "flayr.magiclights.";
     private static int lightStaffID;
     private static int lightID;
+    private static int lightAlterID;
     public static Item lightStaff;
     public static Block light;
+    public static Block lightAlter;
     
 	public static CreativeTabs tabMagicLights = new CreativeTabs("tabMagicLights"){
 		public ItemStack getIconItemStack(){
@@ -56,6 +58,7 @@ public class MagicLights
        
             config.load();
             lightID = config.getBlock("light", 672).getInt();
+            lightAlterID = config.getBlock("lightAlter", 673).getInt();
             lightStaffID = config.getItem("lightStaff", 2527).getInt();
             config.save();
         }
@@ -63,8 +66,8 @@ public class MagicLights
         @EventHandler
         public void load(FMLInitializationEvent event) {
             lightStaff = new LightStaff(lightStaffID);
-            
             light = new Light(lightID, Material.rock);
+            lightAlter = new LightAlter(lightAlterID, Material.rock);
             
         	ItemStack starStack = new ItemStack(Item.netherStar);
         	ItemStack stickStack = new ItemStack(Item.stick);
@@ -75,9 +78,12 @@ public class MagicLights
         	    
             LanguageRegistry.addName(lightStaff, "Staff of Light");
             LanguageRegistry.addName(light, "Light");
+            LanguageRegistry.addName(lightAlter, "Alter of Light");
             LanguageRegistry.instance().addStringLocalization("itemGroup.tabMagicLights", "en_US", MOD_NAME);
             GameRegistry.registerBlock(light, "light");
+            GameRegistry.registerBlock(lightAlter, "lightAlter");
             proxy.registerRenderers();
+            proxy.registerServerTickHandler();
             GameRegistry.registerTileEntity(TileEntityLight.class, "tileEntityLight");
         }
         
