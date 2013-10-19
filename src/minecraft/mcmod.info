@@ -1,18 +1,19 @@
 [
 {
-"modid": "MagicLights",
-"name": "Magic Lights",
-"description": "Adds the staff of light, an item that lets you make invisible light sources.",
-"version": "pre1",
-"credits": "Created by Flayr",
-"logoFile": "",
-"mcversion": "1.6.4",
-"url": "",
-"updateUrl": "",
-"authors": [ "Flayr" ],
-"parent":"",
-"screenshots": [],
-"dependencies": [
-         "mod_MinecraftForge"
-]
+  "modid": "MagicLights",
+  "name": "Magic Lights",
+  "version": "pre1",
+  "mcversion": "1.6.4",
+  "description": "Adds the Staff of Light, which allows you to create invisible light sources.",
+  "credits": "Created by Flayr",
+  "logoFile": "",
+  "url": "",
+  "updateUrl": "",
+  "authors": [ "Flayr" ],
+  "parent":"",
+  "screenshots": [],
+  "dependencies": [
+     "mod_MinecraftForge"
+  ]
 }
+]
