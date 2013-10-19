@@ -23,26 +23,11 @@ public class LightInv extends Light
         {
                 super(id, material);
                 this.setUnlocalizedName("lightInv");
-                this.setCreativeTab(MagicLights.tabMagicLights);
         }
-        @Override
+		@Override
         public TileEntity createNewTileEntity(World par1world)
         {
-			AxisAlignedBB aabb = AxisAlignedBB.getAABBPool().getAABB(-4, -4, -4, +4, +4, +4);
-			List w = par1world.getEntitiesWithinAABB(EntityPlayer.class, aabb);
-			if(w.size() > 0) {
-			     //at least one player in range
-			     EntityPlayer player;
-			     for(int i = 0; i < w.size();) {
-			    	 player = (EntityPlayer) w.get(i);
-			    	 ItemStack stack = player.getHeldItem();
-			    	 ItemStack stack2 = new ItemStack(MagicLights.lightStaff);
-				     if(ItemStack.areItemStacksEqual(stack, stack2)){
-		                 return new TileEntityLightInv();
-				     }else{return null;}
-			     }
-			     return null;
-		    }else{return null;}
+                 return new TileEntityLightInv();
         }
         @Override
         public void registerIcons(IconRegister iconRegister) {

@@ -60,10 +60,10 @@ public class MagicLights
             Configuration config = new Configuration(event.getSuggestedConfigurationFile());
        
             config.load();
-            lightID = config.getBlock("light", 672).getInt();
-            lightInvID = config.getBlock("lightInv", 672).getInt();
-            lightAlterID = config.getBlock("lightAlter", 673).getInt();
-            lightStaffID = config.getItem("lightStaff", 2527).getInt();
+            lightID = config.getBlock("light", 2623).getInt();
+            lightInvID = config.getBlock("lightInv", 2624).getInt();
+            lightAlterID = config.getBlock("lightAlter", 2625).getInt();
+            lightStaffID = config.getItem("lightStaff", 4777).getInt();
             config.save();
         }
         

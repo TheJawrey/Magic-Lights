@@ -14,7 +14,6 @@ public class LightAlter extends Block
                 this.setHardness(1.0F);
                 this.setLightValue(1.0f);
                 this.setUnlocalizedName("lightAlter");
-                this.setCreativeTab(MagicLights.tabMagicLights);
         }
         @SideOnly(Side.CLIENT)
         public void registerIcons(IconRegister iconRegister) {
