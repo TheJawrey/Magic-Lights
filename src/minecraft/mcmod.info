@@ -2,7 +2,7 @@
 {
   "modid": "MagicLights",
   "name": "Magic Lights",
-  "version": "pre1",
+  "version": "1.0.0",
   "mcversion": "1.6.4",
   "description": "Adds the Staff of Light, which allows you to create invisible light sources.",
   "credits": "Created by Flayr",
