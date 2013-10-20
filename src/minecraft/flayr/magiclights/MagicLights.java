@@ -25,14 +25,10 @@ import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
-@Mod(modid = MagicLights.MOD_ID, name = MagicLights.MOD_NAME, version = MagicLights.MOD_VERSION)
+@Mod(modid = "MagicLights", name = "Magic Lights", version ="1.0.0")
 @NetworkMod(clientSideRequired = true, serverSideRequired = false)
 public class MagicLights
 {
-    public static final String MOD_ID = "MagicLights";
-    static final String MOD_NAME = "Magic Lights";
-    static final String MOD_VERSION = "1.0.0";
-    static final String SOURCE_PATH = "flayr.magiclights.";
     private static int lightStaffID;
     private static int lightID;
     private static int lightInvID;
@@ -48,7 +44,7 @@ public class MagicLights
 		}
 	};
     
-        @Mod.Instance("MOD_ID")
+        @Mod.Instance("MagicLights")
         public static MagicLights instance;
 
         @SidedProxy(clientSide="flayr.magiclights.client.ClientProxy",
@@ -78,14 +74,14 @@ public class MagicLights
         	ItemStack stickStack = new ItemStack(Item.stick);
         	ItemStack goldStack = new ItemStack(Item.ingotGold);
         	
-        	GameRegistry.addRecipe(new ItemStack(lightStaff, 4), "gng", " s ", " s ",
+        	GameRegistry.addRecipe(new ItemStack(lightStaff), "gng", " s ", " s ",
         	        'n', starStack, 's', stickStack, 'g', goldStack);
         	    
             LanguageRegistry.addName(lightStaff, "Staff of Light");
             LanguageRegistry.addName(light, "Light");
             LanguageRegistry.addName(lightInv, "Light Invisable");
             LanguageRegistry.addName(lightAlter, "Alter of Light");
-            LanguageRegistry.instance().addStringLocalization("itemGroup.tabMagicLights", "en_US", MOD_NAME);
+            LanguageRegistry.instance().addStringLocalization("itemGroup.tabMagicLights", "en_US", "Magic Lights");
             GameRegistry.registerBlock(light, "light");
             GameRegistry.registerBlock(lightInv, "lightInv");
             GameRegistry.registerBlock(lightAlter, "lightAlter");
